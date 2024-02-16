@@ -1,0 +1,16 @@
+type User {
+  id: Int!
+  firstName: String
+  lastName: String
+  attendances: [Attendance]
+}
+
+type Attendance {
+    from: String
+    to: String
+}
+
+type Query {
+  user(id: Int!): User
+  users: [User]
+}
